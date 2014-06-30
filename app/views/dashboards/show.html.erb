@@ -1,6 +1,7 @@
 <h1> Shoutr </h1>
 
 <%= link_to current_user.email, current_user %>
+<%= link_to "Following", :following %>
 
 <%= form_for @shout do |form|  %>
   <%= form.text_area :body, placeholder: "enter a new SHOUT" %>
