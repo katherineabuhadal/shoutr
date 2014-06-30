@@ -1,4 +1,6 @@
 <h2<shouts</h2>
 
+<%= button_to "Follow #{@user.email}", [@user, :following_relationship] %>
+
 <%= @user.email %>
 <%= render @shouts %>
