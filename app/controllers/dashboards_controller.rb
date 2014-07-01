@@ -1,5 +1,5 @@
 class DashboardsController < ApplicationController
-def show
-  @shout = Shout.new
-end
+  def show
+    @text_subject = TextSubject.new
+  end
 end
