@@ -4,6 +4,8 @@
 <%= link_to "Following", :following %>
 <%= link_to "who I'm following", :followers %>
 
+
+
 <%= form_for @shout do |form|  %>
   <%= form.text_area :body, placeholder: "enter a new SHOUT" %>
   <%= form.submit "Submit" %>

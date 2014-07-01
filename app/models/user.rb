@@ -12,7 +12,8 @@ has_many :follower_relationships,
   foreign_key: :followed_user_id
 
 has_many :followers, 
-  through: :followed_user_relationships
+  through: :follower_relationships
+
 
 def follow(other_user)
   followed_users << other_user
