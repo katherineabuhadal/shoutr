@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @shouts = @user.shouts
+    @shouts = @user.shouts.order("created_at desc")
   end
 
   def new
