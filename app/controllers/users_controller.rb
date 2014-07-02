@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create, :show]
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by!(name: params[:id])
     @shouts = @user.shouts.order("created_at desc")
   end
 
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :name)
   end
 end
 

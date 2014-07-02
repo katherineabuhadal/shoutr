@@ -37,4 +37,8 @@ class User < ActiveRecord::Base
    Shout.where(user_id: followed_users).order('created_at desc')
   end
 
+  def to_param
+    name
+  end
+
 end
