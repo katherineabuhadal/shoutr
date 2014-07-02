@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  
+  
   has_many  :shouts
 
   has_many :text_subjects,
